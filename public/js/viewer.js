@@ -75,6 +75,14 @@ Arcane.msg.on('rotate', ({ x, y }) => {
   $.mouse.y = $.mouse.sy - $.screen.y;
 })
 
+Arcane.msg.on('_PauseApp', () => {
+  $.setState('pause');
+})
+
+Arcane.msg.on('_ResumeApp', () => {
+  $.setState('play');
+})
+
 
 setTimeout(() => {
   $.setState('play');
